@@ -11,6 +11,8 @@ const MultiStepForm = ({ steps }) => {
   const [parcel, setParcel] = useState(undefined);
   const [priceWords, setPriceWords] = useState(undefined);
   const [priceNum, setPriceNum] = useState(undefined);
+  const [escrow, setEscrow] = useState(undefined);
+  const [disclosure, setDisclosure] = useState(undefined);
 
 
 
@@ -28,7 +30,8 @@ const MultiStepForm = ({ steps }) => {
     setProperty={setProperty} setCity={setCity}
     setCounty={setCounty} setZipcode={setZipcode}
     setParcel={setParcel} setPriceWords={setPriceWords}
-    setPriceNum={setPriceNum}
+    setPriceNum={setPriceNum} setEscrow={setEscrow}
+    setDisclosure={setDisclosure}
     handleNext={handleNext} handlePrev={handlePrev} />;
   };
 

@@ -1,3 +1,7 @@
-.escrow-options{
+.escrow-options {
   padding: 16px;
+}
+
+.escrow-options > :nth-child(3) {
+  margin-left: 30px;
 }

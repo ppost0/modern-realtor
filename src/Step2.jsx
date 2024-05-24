@@ -1,7 +1,7 @@
 import React from 'react';
 import './Step2.css';
 
-const Step2 = ({ setPriceWords, setPriceNum, handleNext, handlePrev }) => {
+const Step2 = ({ setPriceWords, setPriceNum, setEscrow, setDisclosure, handleNext, handlePrev }) => {
 
 
 
@@ -18,14 +18,20 @@ const Step2 = ({ setPriceWords, setPriceNum, handleNext, handlePrev }) => {
       <div className='escrow-options'>
         <input type='radio' name='escrow'></input>
         <label htmlFor='escrow'>on:
-          <input type='date'></input>
+          <input onChange={(e)=>{setEscrow(e.target.value)}} type='date'></input>
         </label>
         <input type='radio' name='escrow'></input>
         <label htmlFor='escrow'>or:
-          <input type='number' min='0'></input>
+          <input onChange={(e)=>{setEscrow(e.target.value)}} type='number' min='0'></input>
           <span> days after acceptance.</span>
         </label>
       </div>
+      <label htmlFor='disclosure'>Buyer and Seller each acknowledge receipt of a “Disclosure Regarding Real Estate Agency Relationships”
+      &#40;C.A.R. Form AD&#41;.</label>
+      <input onChange={(e)=>{setDisclosure(e.target.value)}} type='checkbox' name='disclosure' value={true}></input>
+      <label></label>
+      <input></input>
+
 
       <div>
         <button onClick={handlePrev} >
